@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+
+            function pyramidPrint(size){
+                let sp=ep=size;
+                let pattern ="";
+                for( let outer =1; outer<=size;outer++){
+                    for(let inner = 1 ;inner<= ep;inner++ ){
+                        if( inner>=sp ){
+                            pattern+="*";
+                        }
+                        else{
+                            pattern+="A";
+                        }
+                    }
+                    pattern+="\n";
+                    ep++;
+                    sp--;
+                }
+                console.log(pattern);
+            }
+            pyramidPrint(4);
+        </script>
+</body>
+</html>

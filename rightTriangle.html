@@ -1,0 +1,36 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+ function rightTriagle(size){
+let pattern="";
+for(let outer = size ; outer > 0 ; outer--){
+    for(let inner = 1; inner <= size;inner++){
+        if(inner>=outer){
+            pattern+="*"
+        }
+        else{
+            pattern+=" ";
+        }
+     
+    }
+    pattern+="\n";
+}
+console.log(pattern)
+}
+rightTriagle(10);
+
+
+    </script>
+</body>
+</html>
+
+

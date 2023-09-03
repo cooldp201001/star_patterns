@@ -1,0 +1,56 @@
+ <!DOCTYPE html>
+ <html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hollow Triangle star pattern</title>
+ </head>
+ <body>
+    <script>
+   function hollowTriangle(size){
+     let pattern ="";
+
+      for(let outer =0;outer<size;outer++){
+
+         for(let inner =0; inner<=outer;inner++){
+            if(outer >= 2 && outer < size-1 && inner >= 1 && inner<outer){
+               pattern+=" ";
+            }
+            else{
+               pattern+="*";
+            }
+
+         }
+         pattern+="\n";
+      }
+     console.log(pattern);      
+
+   }
+   function hollowTriangle2(n){
+let string = "";
+
+for (let i = 1; i <= n; i++) {
+  // printing star
+  for (let j = 0; j < i; j++) {
+    if(i === n) {
+      string += "*";
+    }
+    else {
+      if (j == 0 || j == i - 1) {
+        string += "*";
+      }
+      else {
+        string += " ";
+      }
+    }
+  }
+  string += "\n";
+}
+console.log(string);
+   }
+   hollowTriangle(5)
+   hollowTriangle2(5);
+   
+    </script>
+ </body>
+ </html>

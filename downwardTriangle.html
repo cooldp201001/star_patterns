@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        
+        function downwardTriangle (size){
+            let limit = size;
+            let pattern ="";
+               for(let outer =1;outer<=size;outer++){
+                for (let inner = 1; inner<=limit;inner++){
+                    
+                    pattern+="*";
+
+                }
+                pattern+="\n";
+            limit--;
+               }
+               console.log(pattern);
+
+        }
+
+        // downwardTriangle(15);    
+
+        function downwardTriangle2 (size){
+            let pattern ="";
+
+               for(let outer =0;outer<size;outer++){
+                for (let inner = 0; inner<size-outer;inner++){
+                    pattern+="*";
+                }
+
+                pattern+="\n";
+         
+            }
+            console.log('%c'+pattern, 'color: blue; font-weight: bold;');
+
+
+        }
+        downwardTriangle2(50);
+    </script>
+</body>
+</html>

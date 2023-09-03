@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reverse pyramid</title>
+</head>
+<body>
+    
+    <script>
+        
+        function reversePyramid(size){
+            let pattern=""
+            
+            for(let outer =1 ;outer<=size;outer++){
+                for(let inner =1;inner<=size*2-outer;inner++){
+                    if(inner>=outer){
+                        pattern+="*"
+                    }
+                    else{
+                        pattern+="_";
+                    }
+
+                }
+                pattern+="\n";
+            }
+            console.log(pattern);
+        }
+        
+        reversePyramid(40);
+    </script>
+</body>
+</html>

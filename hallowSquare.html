@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // hallowSquare(10)
+
+        function hallowSquare(size) {
+
+            let rst = "";
+            for (let outer = 0; outer < size; outer++) {
+
+                for (let inner = 0; inner < size; inner++) {
+
+                    if (outer > 0 && outer < size - 1 && inner > 0 && inner < size - 1) {
+                        rst += " "
+                    }
+                    else {
+                        rst += "*"
+                    }
+
+                }
+                rst += "\n";
+            }
+            console.log(rst);
+
+        }
+
+        
+    </script>
+</body>
+
+
+</html>
