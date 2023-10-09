@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      function pyramid(size) {
+        let str = "";
+        for (let col = 1; col <= size; col++) {
+          for (let row = 1; row <= size * 2 - 1; row++) {
+            if (col + row >= size + 1 && row - col <= size - 1) {
+              str += "*";
+            } else {
+              str += "-";
+            }
+          }
+          str += "\n";
+        }
+        console.log(str);
+      }
+
+      pyramid(50);
+    </script>
+  </body>
+</html>

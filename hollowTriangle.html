@@ -48,9 +48,31 @@ for (let i = 1; i <= n; i++) {
 }
 console.log(string);
    }
-   hollowTriangle(5)
-   hollowTriangle2(5);
+  //  hollowTriangle(5)
+  //  hollowTriangle2(5);
    
+
+   function hollowTriangle3(size){
+
+    let str = "";
+
+    for(let col =1 ; col<=size; col++){
+
+      for(let row =1 ;row<= col; row++){
+
+        if(col == row || row == 1 || col == size)
+        str+="*"
+       else
+       str+="-"
+    }
+    
+    str+="\n"
+
+    }
+    console.log(str);
+   }
+
+   hollowTriangle3(15)
     </script>
  </body>
  </html>

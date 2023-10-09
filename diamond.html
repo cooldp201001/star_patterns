@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diamond Pattern </title>
+</head>
+<body>
+    
+    <script>
+     
+     function diamond(size){
+    let str=""
+     let limit = size*2-1
+     let sp = size;
+     let ep = size;
+    for(let col =1; col <= limit ; col++){
+
+        for(let row =1 ; row <= limit ; row++){
+            // if(row== sp || row==ep) for hollow diamond
+            if(row>= sp && row<=ep){
+               str+="*"
+            }
+            else{
+                str+=" ";
+            }
+            
+        }
+        
+        if(col >= size){
+            sp++;
+            ep--
+        }
+        else{
+            sp--
+            ep++
+        }
+
+        str+='\n'
+    }
+  console.log(str)
+}
+
+diamond(5)
+    </script>
+</body>
+</html>

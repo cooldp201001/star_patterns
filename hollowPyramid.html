@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+
+        function pyramidPrint(size) {
+            let sp = ep = size;
+            let pattern = "";
+            for (let outer = 1; outer <= size; outer++) {
+                for (let inner = 1; inner <= ep; inner++) {
+
+                    if (outer != size) { 
+
+
+                        if (inner ==sp || inner == ep) {
+                            pattern += "*";
+                        }
+                        else {
+                            pattern += " ";
+                        }
+                    }
+                else{
+                    pattern+="*"
+                }
+                }
+                pattern += "\n";
+                ep++;
+                sp--;
+            }
+            console.log(pattern);
+        }
+        // pyramidPrint(5);
+
+        function solution(size){
+            
+            let pattern="";
+            for(let row=1;row<=size;row++){
+                for(let col = 1; col<=size*2-1;col++){
+                    if(row+col ==size+1 || col-row== size-1 || row==size)
+                     pattern+="*"
+                    else
+                    pattern+=" "
+                }
+                pattern+="\n";
+
+            }
+            console.log(pattern);
+        }
+        solution(5)
+    </script>
+</body>
+
+</html>
